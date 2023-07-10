@@ -15,11 +15,11 @@ async function test() {
     const audioData = audio.channelData[0];
   
     // Convert audio samples to wave blob
-    // const wavBlob = await getWaveBlob(audioData, false);
-    // console.log('Wave Blob:', wavBlob);
+    const wavBlob = await getWaveBlob(audioData, false);
+    console.log('Wave Blob:', wavBlob);
   
     // Write the wave blob to a file
-    // fs.writeFileSync('audio.wav', Buffer.from(wavBlob));
+    fs.writeFileSync('audio.wav', Buffer.from(wavBlob));
   
     console.log('Wave file written successfully');
   } catch (error) {
